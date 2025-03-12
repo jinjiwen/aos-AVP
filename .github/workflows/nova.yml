@@ -49,8 +49,6 @@ jobs:
       run: |
         cd nova/Video
         ./gradlew aNR
-    - name: Upload APK
-      uses: actions/upload-artifact@v3
-      with:
-        name: org.courville.nova-2622212-6.2.97-20250311.0947-arm64-v8a-release-unsigned.apk
-        path: app/build/outputs/apk/debug/org.courville.nova-2622212-6.2.97-20250311.0947-arm64-v8a-release-unsigned.apk
+    - name: List APK files
+      run: |
+        ls -R nova/Video/build/outputs/apk/release
